@@ -74,6 +74,7 @@ def masuk():
     print logo
     print '\x1b[1;92m[01]\x1b[1;97m\x1b[1;96m\x1b[1;92m Login with cookies'
     print '\x1b[1;92m[02]\x1b[1;97m\x1b[1;96m\x1b[1;92m Login with Token'
+    print '\033[1;92m[03] Follow me on facebook'
     print '\x1b[1;92m[00]\x1b[1;97m\x1b[1;96m\x1b[1;92m Back'
     pilih_masuk()
  
@@ -87,6 +88,8 @@ def pilih_masuk():
         cookie()
     elif msuk == '2' or msuk == '02':
         tokenz()
+    elif musk == '3' or msuk == '03':
+        os.system('xdg-open https://www.facebook.com/100011466164055 /')
     elif msuk == '0' or msuk == '00':
         keluar()
     else:
