@@ -72,15 +72,14 @@ listgrup = []
 def masuk():
     os.system('clear')
     print logo
-    print '\x1b[1;92m[01]\x1b[1;97m\x1b[1;96m\x1b[1;92m Login with cookies'
-    print '\x1b[1;92m[02]\x1b[1;97m\x1b[1;96m\x1b[1;92m Login with Token'
-    print '\033[1;92m[03] Follow me on facebook'
-    print '\x1b[1;92m[00]\x1b[1;97m\x1b[1;96m\x1b[1;92m Back'
+    print '\x1b[1;92m[01]\x1b[1;97m\x1b[1;96m\x1b[1;92mＢｉｌａｌ-ＸＤ Login with cookies'
+    print '\x1b[1;92m[02]\x1b[1;97m\x1b[1;96m\x1b[1;92mＢｉｌａｌ-ＸＤ Login with Token'    
+    print '\x1b[1;92m[00]\x1b[1;97m\x1b[1;96m\x1b[1;92mＢｉｌａｌ-ＸＤ Back'
     pilih_masuk()
  
  
 def pilih_masuk():
-    msuk = raw_input('\x1b[0;96mᗷƖᒪᗩᒪ➣\x1b[97m\x1b[0;92m ')
+    msuk = raw_input('\x1b[0;96mＢｉｌａｌ-ＸＤ➣\x1b[97m\x1b[0;92m ')
     if msuk == '':
         print '\x1b[1;41;97m!\x1b[0m] Choose A Correct Option !'
         pilih_masuk()
@@ -88,8 +87,6 @@ def pilih_masuk():
         cookie()
     elif msuk == '2' or msuk == '02':
         tokenz()
-    elif musk == '3' or msuk == '03':
-        os.system('xdg-open https://www.facebook.com/100011466164055 /')
     elif msuk == '0' or msuk == '00':
         keluar()
     else:
